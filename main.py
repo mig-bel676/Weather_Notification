@@ -1,10 +1,12 @@
+import os
+
 import requests
 # Messaging API
 from twilio.rest import Client
 
 # Authorization for using Twilio Messaging API
-account_sid = "ACd4a57246f080e3ae542c65ffeaf7a514"
-auth_token = "51e1e396865ec3cccf9d7c9d4217d962"
+account_sid = os.environ.get('account_sid')
+auth_token = os.environ.get('auth_token')
 
 
 degree_sign = u'\N{DEGREE SIGN}'
